@@ -354,8 +354,15 @@ with gr.Blocks(theme=gr.themes.Soft(), title="Police AI System") as demo:
     """)
 
 if __name__ == "__main__":
+    print("🚔 पुलिस AI सिस्टम शुरू हो रहा है...")
+    print("📍 निम्न URL पर जाएं:")
+    print("   Local: http://localhost:7860/")
+    print("   या: http://127.0.0.1:7860/")
+    
     demo.launch(
-        server_name="0.0.0.0",  # Allow network access
+        server_name="127.0.0.1",  # Change to "0.0.0.0" for network access
         server_port=7860,
-        show_error=True
+        show_error=True,
+        share=False,
+        inbrowser=True
     )
